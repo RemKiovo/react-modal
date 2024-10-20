@@ -1,3 +1,3 @@
-import Modal from './components/Modal.js'
+import Modal from './components/Modal.tsx'
 
-export { Modal }
+export default Modal

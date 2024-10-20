@@ -6,8 +6,10 @@
   ],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "moduleResolution": "Node16",
+    "module": "Node16",
     "jsx": "react"
   }
 }

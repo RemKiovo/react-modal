@@ -1,7 +1,7 @@
 {
-  "name": "react-modal",
+  "name": "@remkiovo/react-modal",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple modal component for React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
   "homepage": "https://github.com/RemKiovo/react-modal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RemKiovo/react-modal.git"
+    "url": "git+https://github.com/RemKiovo/react-modal.git"
   },
   "keywords": [
     "react",
