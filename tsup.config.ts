@@ -8,7 +8,6 @@ export default defineConfig({
   skipNodeModulesBundle: true,
   clean: true,
   sourcemap: true,
-  minify: true,
   target: 'es2015',
   external: ['react', 'react-dom', 'clsx', 'lucide-react'],
 })

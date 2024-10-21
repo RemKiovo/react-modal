@@ -2,11 +2,15 @@
 /dist
 /node_modules
 
+*.lockd
+*.lock
+
 .env
 .eslintrc.config.js
 .DS_Store
 
 index.html
+eslint.config.js
 postcss.config.js
 tailwind.config.js
 tsconfig.json
