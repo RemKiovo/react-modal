@@ -28,25 +28,25 @@ yarn install @remkiovo/react-modal
 ## Usage
 
 ```tsx
-import { useState } from 'react'
-import Modal from '@remkiovo/react-modal'
+import { useState } from "react";
+import Modal from "@remkiovo/react-modal";
 function App() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <button onClick={() => setIsOpen(true)}>Open Modal</button>
       {isOpen && (
         <Modal
-          title='Welcome!'
-          description='This is a simple modal component.'
-          buttonText='Close'
+          title="Welcome!"
+          description="This is a simple modal component."
+          buttonText="Close"
           closeModal={() => setIsOpen(false)}
           buttonOnClick={() => setIsOpen(false)}
-          buttonClassName='bg-blue-500 hover:bg-blue-600 text-white'
+          buttonClassName="bg-blue-500 hover:bg-blue-600 text-white"
         />
       )}
     </>
-  )
+  );
 }
 ```
 
@@ -64,7 +64,8 @@ function App() {
 
 ## Styling
 
-The modal comes with default styling using TailwindCSS. You can customize the appearance by:
+The modal comes with default styling using TailwindCSS. You can customize the
+appearance by:
 
 1. Using the `className` prop to style the modal container
 2. Using the `buttonClassName` prop to style the action button
