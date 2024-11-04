@@ -1,50 +1,79 @@
-# React + TypeScript + Vite
+# @remkiovo/react-modal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, lightweight, and customizable modal component for React applications
+with TypeScript support and TailwindCSS styling.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install @remkiovo/react-modal
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+or
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn install @remkiovo/react-modal
 ```
+
+## Features
+
+- 🎯 Simple and easy to use
+- 🎨 Customizable styling with TailwindCSS
+- 📱 Responsive design
+- 🔒 TypeScript support
+- 🖱️ Click outside to close
+- ✨ Smooth animations
+- ⌨️ Accessible
+
+## Usage
+
+```tsx
+import { useState } from 'react'
+import Modal from '@remkiovo/react-modal'
+function App() {
+  const [isOpen, setIsOpen] = useState(false)
+  return (
+    <>
+      <button onClick={() => setIsOpen(true)}>Open Modal</button>
+      {isOpen && (
+        <Modal
+          title='Welcome!'
+          description='This is a simple modal component.'
+          buttonText='Close'
+          closeModal={() => setIsOpen(false)}
+          buttonOnClick={() => setIsOpen(false)}
+          buttonClassName='bg-blue-500 hover:bg-blue-600 text-white'
+        />
+      )}
+    </>
+  )
+}
+```
+
+## Props
+
+| Prop              | Type       | Required | Description                                        |
+| ----------------- | ---------- | -------- | -------------------------------------------------- |
+| `title`           | string     | Yes      | The title of the modal                             |
+| `description`     | string     | Yes      | The main content/description of the modal          |
+| `buttonText`      | string     | Yes      | Text to display on the action button               |
+| `closeModal`      | () => void | Yes      | Function to call when closing the modal            |
+| `buttonOnClick`   | () => void | Yes      | Function to call when the action button is clicked |
+| `className`       | string     | No       | Additional classes for the modal container         |
+| `buttonClassName` | string     | No       | Additional classes for the action button           |
+
+## Styling
+
+The modal comes with default styling using TailwindCSS. You can customize the appearance by:
+
+1. Using the `className` prop to style the modal container
+2. Using the `buttonClassName` prop to style the action button
+
+## Requirements
+
+- React 18 or higher
+- TailwindCSS 3.x
+
+## License
+
+MIT © [RemKiovo](https://github.com/RemKiovo)
