@@ -28,25 +28,26 @@ yarn install @remkiovo/react-modal
 ## Usage
 
 ```tsx
-import { useState } from "react";
-import Modal from "@remkiovo/react-modal";
+import { useState } from 'react'
+import Modal from '@remkiovo/react-modal'
+import '@remkiovo/react-modal/dist/index.css'
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <button onClick={() => setIsOpen(true)}>Open Modal</button>
       {isOpen && (
         <Modal
-          title="Welcome!"
-          description="This is a simple modal component."
-          buttonText="Close"
+          title='Welcome!'
+          description='This is a simple modal component.'
+          buttonText='Close'
           closeModal={() => setIsOpen(false)}
           buttonOnClick={() => setIsOpen(false)}
-          buttonClassName="bg-blue-500 hover:bg-blue-600 text-white"
+          buttonClassName='bg-blue-500 hover:bg-blue-600 text-white'
         />
       )}
     </>
-  );
+  )
 }
 ```
 
